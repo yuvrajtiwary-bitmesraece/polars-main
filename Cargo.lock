@@ -174,9 +174,9 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "16f4a9468c882dc66862cef4e1fd8423d47e67972377d85d80e022786427768c"
 dependencies = [
  "ahash",
- "arrow-buffer",
- "arrow-data",
- "arrow-schema",
+ "arrow-buffer 52.2.0",
+ "arrow-data 52.2.0",
+ "arrow-schema 52.2.0",
  "chrono",
  "half",
  "hashbrown",
@@ -195,13 +195,36 @@ dependencies = [
 ]
 
 [[package]]
+name = "arrow-buffer"
+version = "53.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9e51e05228852ffe3eb391ce7178a0f97d2cf80cc6ef91d3c4a6b3cb688049ec"
+dependencies = [
+ "bytes",
+ "half",
+ "num",
+]
+
+[[package]]
 name = "arrow-data"
 version = "52.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "dd9d6f18c65ef7a2573ab498c374d8ae364b4a4edf67105357491c031f716ca5"
 dependencies = [
- "arrow-buffer",
- "arrow-schema",
+ "arrow-buffer 52.2.0",
+ "arrow-schema 52.2.0",
+ "half",
+ "num",
+]
+
+[[package]]
+name = "arrow-data"
+version = "53.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b98ae0af50890b494cebd7d6b04b35e896205c1d1df7b29a6272c5d0d0249ef5"
+dependencies = [
+ "arrow-buffer 53.2.0",
+ "arrow-schema 53.2.0",
  "half",
  "num",
 ]
@@ -211,6 +234,12 @@ name = "arrow-schema"
 version = "52.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9e972cd1ff4a4ccd22f86d3e53e835c2ed92e0eea6a3e8eadb72b4f1ac802cf8"
+
+[[package]]
+name = "arrow-schema"
+version = "53.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "539ada65246b949bd99ffa0881a9a15a4a529448af1a07a9838dd78617dafab1"
 
 [[package]]
 name = "arrow2"
@@ -2895,7 +2924,7 @@ version = "0.42.0"
 dependencies = [
  "ahash",
  "apache-avro",
- "arrow-buffer",
+ "arrow-buffer 52.2.0",
  "avro-schema",
  "either",
  "ethnum",
@@ -2925,9 +2954,9 @@ version = "0.42.0"
 dependencies = [
  "ahash",
  "arrow-array",
- "arrow-buffer",
- "arrow-data",
- "arrow-schema",
+ "arrow-buffer 52.2.0",
+ "arrow-data 53.2.0",
+ "arrow-schema 52.2.0",
  "async-stream",
  "atoi",
  "atoi_simd",
